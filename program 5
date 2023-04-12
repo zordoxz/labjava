@@ -1,0 +1,8 @@
+public class StringReplaceDemo {
+    public static void main(String[] args) {
+        String originalString = "Hello world, hello universe!";
+        String newString = originalString.replace("hello", "hi");
+        System.out.println("Original string: " + originalString);
+        System.out.println("New string: " + newString);
+    }
+}
