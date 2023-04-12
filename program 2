@@ -1,0 +1,23 @@
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.reflect.Method;
+
+@Retention(RetentionPolicy.RUNTIME)
+@interface MyAnnotation {
+    String value();
+}
+
+class Example {
+    @MyAnnotation(value = "Hello, world!")
+    public void myMethod() {
+        // Method implementation
+    }
+}
+
+public class AnnotationDemo {
+    public static void main(String[] args) throws NoSuchMethodException {
+        Method method = Example.class.getMethod("myMethod");
+        MyAnnotation annotation = method.getAnnotation(MyAnnotation.class);
+        System.out.println(annotation.value());
+    }
+}
