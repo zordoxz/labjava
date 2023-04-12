@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorDemo {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("apple");
+        list.add("banana");
+        list.add("cherry");
+        list.add("durian");
+        
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            String fruit = iterator.next();
+            System.out.println(fruit);
+        }
+    }
+}
